@@ -24,8 +24,9 @@ class Student
       new_student.id = student[0]
       new_student.name = student[1]
       new_student.grade = student[2]
-          binding.pry
     end
+    
+    binding.pry
 
     
   end
