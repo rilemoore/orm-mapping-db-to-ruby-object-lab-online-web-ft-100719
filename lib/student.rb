@@ -20,10 +20,7 @@ class Student
     row = DB[:conn].execute(sql)
     
     row.map do |student|
-      new_student = Student.new
-      new_student.id = student[0]
-      new_student.name = student[1]
-      new_student.grade = student[2]
+      self.new_from_db(student)
     end
     
     binding.pry
