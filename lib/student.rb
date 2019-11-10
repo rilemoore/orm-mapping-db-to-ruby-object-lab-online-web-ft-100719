@@ -19,7 +19,7 @@ class Student
     sql = "SELECT * FROM students"
     row = DB[:conn].execute(sql)
     
-    new_array = row.map do |student|
+    row.map do |student|
       new_student = Student.new
       new_student.id = student[0]
       new_student.name = student[1]
