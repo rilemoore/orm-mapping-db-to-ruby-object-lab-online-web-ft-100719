@@ -23,7 +23,6 @@ class Student
     
     sql = "SELECT * FROM students WHERE name = ?"
     row = DB[:conn].execute(sql, name).flatten
-    binding.pry
     new_student = Student.new
     new_student.id = row[0]
     new_student.name = row[1]
