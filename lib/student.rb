@@ -21,9 +21,9 @@ class Student
     
     new_array = row.map do |student|
       new_student = Student.new
-      new_student.id = row[0]
-      new_student.name = row[1]
-      new_student.grade = row[2]
+      new_student.id = student[0]
+      new_student.name = student[1]
+      new_student.grade = student[2]
           binding.pry
     end
 
