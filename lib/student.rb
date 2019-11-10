@@ -17,7 +17,7 @@ class Student
     # remember each row should be a new instance of the Student class
     
     sql = "SELECT * FROM students"
-    row = DB[:conn].execute(sql).flatten
+    row = DB[:conn].execute(sql)
     binding.pry
     new_student = Student.new
     new_student.id = row[0]
