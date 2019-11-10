@@ -18,13 +18,13 @@ class Student
     
     sql = "SELECT * FROM students"
     row = DB[:conn].execute(sql)
+    row.map do |student|
+      new_student = Student.new
+      new_student.id = row[0]
+      new_student.name = row[1]
+      new_student.grade = row[2]
+    end
     
-    new_student = Student.new
-    new_student.id = row[0]
-    new_student.name = row[1]
-    new_student.grade = row[2]
-    binding.pry
-    new_student
     
   end
 
